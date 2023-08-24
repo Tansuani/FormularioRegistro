@@ -1,10 +1,12 @@
 
-const SocialButton = () => {
+const SocialButton = ({facebook, github, linkedin}) => {
   return (
-    <div>SocialButton</div>
+    <div>
+      <button>{facebook}</button>
+      <button>{github}</button>
+      <button>{linkedin}</button>
+    </div>
   )
 }
 
 export default SocialButton
-
-{/* agregar botones de redes sociales*/}

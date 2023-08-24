@@ -1,15 +1,19 @@
+import Header from "./Header"
 import Alert from "./Alerts/Alertemail"
 import SocialButton from "./SocialButton"
 import Form from "./Form"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 
 const Registration = () => {
   return (
     <div>
-        <SocialButton>
-            {/*botones de redes sociales por props hacia "socialbuttons"*/}
-        </SocialButton>
+      <Header title="Suscríbete con nosotros" /> 
+      <Form>
+                            
+      </Form>
         
+      
         Registration
         
     </div>
