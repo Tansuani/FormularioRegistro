@@ -4,21 +4,21 @@ import { useState } from "react";
 const Form = () => {
   const [nombre, setNombre] = useState("");
   const [apellido, setApellido] = useState("");
-  const [edad, setEdad] = useState("");
+  const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
   const [error, setError] = useState(false)
 
   const validarDatos = (e) => {
     e.preventDefault()
     
-    if(nombre === '' || apellido === '' || edad === '' || email === '') {
+    if(nombre === '' || apellido === '' || password === '' || email === '') {
         setError(true)
         return
     }
     setError(false)
     setNombre('')
     setApellido('')
-    setEdad('')
+    setPassword('')
     setEmail('')
   }
 
@@ -47,13 +47,13 @@ const Form = () => {
           />
         </div>
         <div className="form-group">
-          <label>Edad</label>
+          <label>Contraseña</label>
           <input
-            type="text"
-            name="edad"
+            type="password"
+            name="password"
             className="form-control"
-            onChange={(e) => setEdad(e.target.value)}
-            value={edad}
+            onChange={(e) => setPassword(e.target.value)}
+            value={password}
           />
           {}
         </div>
@@ -72,7 +72,7 @@ const Form = () => {
         </button>
       </form>
       <h1>Datos ingresados</h1>
-      {nombre} - {apellido} - {edad} - {email}
+      {nombre} - {apellido} - {email}
     </>
   );
 };
