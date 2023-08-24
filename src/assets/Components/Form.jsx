@@ -6,21 +6,23 @@ import { useState } from "react";
 const Form = () => {
   const [nombre, setNombre] = useState("");
   const [apellido, setApellido] = useState("");
-  const [edad, setEdad] = useState("");
+  const [password, setPassword] = useState("");
+  const [password2, setPassword2] = useState("");
   const [email, setEmail] = useState("");
   const [error, setError] = useState(false)
 
   const validarDatos = (e) => {
     e.preventDefault()
     
-    if(nombre === '' || apellido === '' || edad === '' || email === '') {
+    if(nombre === '' || apellido === '' || password === '' || email === '' || password !== password2 ) {
         setError(true)
         return
     }
     setError(false)
     setNombre('')
     setApellido('')
-    setEdad('')
+    setPassword('')
+    setPassword2('')
     setEmail('')
   }
 
@@ -49,15 +51,23 @@ const Form = () => {
           />
         </div>
         <div className="form-group">
-          <label>Edad</label>
+          <label>Contraseña</label>
           <input
-            type="text"
-            name="edad"
+            type="password"
+            name="password"
             className="form-control"
-            onChange={(e) => setEdad(e.target.value)}
-            value={edad}
+            onChange={(e) => setPassword(e.target.value)}
+            value={password}
           />
-          {}
+        <div className="form-group">
+          <label>Confirma Contraseña</label>
+          <input
+            type="password"
+            name="password2"
+            className="form-control"
+            onChange={(e) => setPassword2(e.target.value)}
+            value={password2}
+          />
         </div>
         <div className="form-group">
           <label>Email</label>
@@ -74,7 +84,7 @@ const Form = () => {
         </button>
       </form>
       <h1>Datos ingresados</h1>
-      {nombre} - {apellido} - {edad} - {email}
+      {nombre} - {apellido} - {email}
     </>
   );
 };
