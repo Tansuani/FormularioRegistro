@@ -1,10 +1,18 @@
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 const SocialButton = ({facebook, github, linkedin}) => {
   return (
     <div>
-      <button>{facebook}</button>
-      <button>{github}</button>
-      <button>{linkedin}</button>
+      <button>
+        <i class={facebook}></i>
+      </button>
+      <button>
+        <i class={github}></i>
+      </button>
+      <button>
+        <i class={linkedin}></i>
+      </button>
     </div>
   )
 }
