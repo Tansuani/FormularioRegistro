@@ -1,15 +1,14 @@
 
 import './App.css'
-import Registration from "./assets/Components/Registration"
+import Registration from './assets/Components/Registration';
+
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <Registration></Registration>
+      <Registration/> 
     </>
   )
 }
 
-export default App
+export default App;
