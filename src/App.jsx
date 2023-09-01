@@ -5,9 +5,9 @@ import Registration from './assets/Components/Registration';
 
 function App() {
   return (
-    <>
+    <div className='registri'>
       <Registration/> 
-    </>
+    </div>
   )
 }
 

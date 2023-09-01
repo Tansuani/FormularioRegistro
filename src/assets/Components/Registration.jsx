@@ -23,7 +23,6 @@ const [alert, setAlert] = useState ({
         />
       <Form setAlert={setAlert}/>
       {alert.msg && <Alert color={alert.color}>{alert.msg}</Alert>}
-      
     </>
   );
 };

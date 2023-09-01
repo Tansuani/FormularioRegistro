@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Swal from 'sweetalert2'
 
 const Form = ({setAlert}) => {
   const [formData, setFormData] = useState({
@@ -18,19 +19,19 @@ const Form = ({setAlert}) => {
     validarInputs
       ? setAlert({
           error: true,
-          msg: "Ingresa los datos",
+          msg: Swal.fire('Ingresa los datos'),
           color: "danger",
       })
       : setAlert({
         error: false,
-        msg: "Ya estas suscrito",
+        msg: Swal.fire('Ya estas suscrito'),
         color: "success",
       });
     
     if (validarPassword) {
       setAlert({
         error: true,
-        msg: "No coinciden los password",
+        msg: Swal.fire('Verifica las claves'),
         color: "danger",
       });
 
@@ -108,89 +109,3 @@ const handleChange = (e) => {
 
 export default Form;
 
-
-
-{/*}
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Alert from "./Alerts/Alertemail"
-
-import { useState } from "react";
-
-const Form = () => {
-  const [nombre, setNombre] = useState("");
-  const [apellido, setApellido] = useState("");
-  const [edad, setEdad] = useState("");
-  const [email, setEmail] = useState("");
-  const [error, setError] = useState(false)
-
-  const validarDatos = (e) => {
-    e.preventDefault()
-    
-    if(nombre === '' || apellido === '' || edad === '' || email === '') {
-        setError(true)
-        return
-    }
-    setError(false)
-    setNombre('')
-    setApellido('')
-    setEdad('')
-    setEmail('')
-  }
-
-  return (
-    <>
-      <form className="formulario" onSubmit={validarDatos}>
-        {error ? <p>Todos los campos son obligatorios</p> : null}
-        <div className="form-group">
-          <label>Nombre</label>
-          <input
-            type="text"
-            name="nombre"
-            className="form-control"
-            onChange={(e) => setNombre(e.target.value)}
-            value={nombre}
-          />
-        </div>
-        <div className="form-group">
-          <label>Apellido</label>
-          <input
-            type="text"
-            name="apellido"
-            className="form-control"
-            onChange={(e) => setApellido(e.target.value)}
-            value={apellido}
-          />
-        </div>
-        <div className="form-group">
-          <label>Edad</label>
-          <input
-            type="text"
-            name="edad"
-            className="form-control"
-            onChange={(e) => setEdad(e.target.value)}
-            value={edad}
-          />
-          {}
-        </div>
-        <div className="form-group">
-          <label>Email</label>
-          <input
-            type="text"
-            name="email"
-            className="form-control"
-            onChange={(e) => setEmail(e.target.value)}
-            value={email}
-          />
-        </div>
-        <button type="submit" className="btn btn-primary">
-          Enviar
-        </button>
-      </form>
-      <h1>Datos ingresados</h1>
-      {nombre} - {apellido} - {edad} - {email}
-    </>
-  );
-};
-
-export default Form;
-*/}

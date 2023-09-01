@@ -5,6 +5,22 @@
   text-align: center;
 }
 
+.registri{
+  background-color: white;
+  border-radius: 10px;
+  height: 80vh;
+  width: 30vw;
+}
+.form-group{
+  margin: 10px;
+  border-radius: 2px;
+  padding-top: 10px;
+}
+
+.titulo{
+  padding-top: 80px;
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;
