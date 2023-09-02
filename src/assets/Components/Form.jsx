@@ -31,7 +31,7 @@ const Form = ({setAlert}) => {
     if (validarPassword) {
       setAlert({
         error: true,
-        msg: Swal.fire('Verifica las claves'),
+        msg: Swal.fire('Clave incorrecta'),
         color: "danger",
       });
 
