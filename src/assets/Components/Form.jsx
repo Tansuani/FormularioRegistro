@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import Swal from 'sweetalert2'
 
 const Form = ({setAlert}) => {
   const [formData, setFormData] = useState({
@@ -98,6 +97,8 @@ const handleChange = (e) => {
             <button
               type="submit"
               className="btn btn-success"
+              style={{color: "darkgreen"}}
+
             >
                 Log In
             </button>
