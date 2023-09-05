@@ -3,7 +3,6 @@ import Header from "./Header"
 import SocialButton from "./SocialButton"
 import Form from "./Form"
 import Alert from "./Alert"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {useState} from "react"
 
 
