@@ -1,9 +1,13 @@
 
 
 
-const Alert = () => {
+const Alert = ({children, color}) => {
   return (
-    <div></div>
+    
+    <div className={`alert alert-${color} my-2`} role="alert">
+      {children}
+    </div>
+    
   )
 }
 

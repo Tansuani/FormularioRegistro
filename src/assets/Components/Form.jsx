@@ -19,19 +19,19 @@ const Form = ({setAlert}) => {
     validarInputs
       ? setAlert({
           error: true,
-          msg: Swal.fire('Ingresa los datos'),
+          msg: 'Ingresa los datos',
           color: "danger",
       })
       : setAlert({
         error: false,
-        msg: Swal.fire('Ya estas suscrito'),
+        msg: 'Ya estas suscrito',
         color: "success",
       });
     
     if (validarPassword) {
       setAlert({
         error: true,
-        msg: Swal.fire('Verifica las claves'),
+        msg: 'Verifica las claves',
         color: "danger",
       });
 
